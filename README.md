@@ -80,7 +80,7 @@ In Cargo.toml:
 
 ```toml
 [lib]
-# ...
+name = "example"
 crate-type = ["dylib"]
 ```
 
