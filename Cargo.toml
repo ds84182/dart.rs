@@ -2,6 +2,7 @@
 name = "dart"
 version = "0.1.0"
 authors = ["Dwayne Slater <ds84182@gmail.com>"]
+build = "build.rs"
 
 [dependencies]
 libc = "0.2.34"
