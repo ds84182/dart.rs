@@ -10,7 +10,7 @@ NOTE: Be aware that this is my first Rust library. Constructive feedback would b
 
 In Rust:
 
-```rs
+```rust
 // Must be in the format <library name>_Init, where <library name> is the same as the dll/so (<library name>.dll, lib<library name>.so)
 #[no_mangle]
 #[allow(non_snake_case)]
@@ -80,7 +80,7 @@ In Cargo.toml:
 
 ```toml
 [lib]
-...
+# ...
 crate-type = ["dylib"]
 ```
 
