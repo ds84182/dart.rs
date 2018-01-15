@@ -1,6 +1,5 @@
 extern crate libc;
 
-use std;
 use std::ffi::CStr;
 
 pub type RawDartHandle = *mut libc::c_void;
@@ -389,8 +388,8 @@ pub enum CObject {
 
 impl<'a> From<&'a RawCObject> for CObject {
     fn from(object: &RawCObject) -> Self {
-        use dart::CObject::*;
-        use dart::DartCObjectType as Type;
+        use CObject::*;
+        use DartCObjectType as Type;
 
         unsafe {
             match object.typ {
@@ -414,8 +413,8 @@ impl<'a> From<&'a RawCObject> for CObject {
 
 impl<'a> From<&'a CObject> for RawCObject {
     fn from(object: &CObject) -> RawCObject {
-        use dart::CObject::*;
-        use dart::DartCObjectType as Type;
+        use CObject::*;
+        use DartCObjectType as Type;
 
         match *object {
             Null => RawCObject { typ: Type::Null, value: DartCObjectValue { null: () } },
